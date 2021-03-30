@@ -63,8 +63,8 @@ function open_bill()
             } else {
                 // update current item
                 $sql = "UPDATE `bill_detail`
-                SET `Bill_id`={$bill_result[0][0]},`Product_ID`={$p_id},`Quantity`={$p_qty},`Unit_Price`={$p_price}
-                WHERE Product_ID = {$p_id}";
+                        SET `Bill_id`={$bill_result[0][0]},`Product_ID`={$p_id},`Quantity`={$p_qty},`Unit_Price`={$p_price}
+                        WHERE Product_ID = {$p_id}";
                 $result = $db->exec($sql);
             }
         }

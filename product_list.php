@@ -79,7 +79,7 @@ $_SESSION['cus_id'] = 1;
             }
             xhttp.open("POST", "product_rest.php", true);
             xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            xhttp.send("p_id=" + arr[idx][0] + "&p_qty=" + qty.value + "&p_price=" + price + "&cus_id=" + cus_id);
+            xhttp.send("p_id=" + arr[idx][0] + "&p_qty=" + qty.value + "&p_price=" + price*qty.value + "&cus_id=" + cus_id);
         }
     </script>
 </body>
