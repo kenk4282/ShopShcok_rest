@@ -34,7 +34,7 @@ function open_bill()
 
     $p_id = $_POST['p_id'];
     $p_qty = $_POST['p_qty'];
-    $p_price = $_POST['p_price'];
+    $p_price = $_POST['p_price'] * $_POST['p_qty'];
 
     $db = new database();
     $db->connect();
