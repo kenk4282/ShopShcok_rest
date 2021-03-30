@@ -69,4 +69,5 @@ function open_bill()
     $db->close();
     return $bill_result;
 }
+//
 ?>
