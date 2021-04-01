@@ -38,7 +38,7 @@ function open_bill()
     $bill_detail = "";
     $p_id = $_POST['p_id'];
     $p_qty = $_POST['p_qty'];
-    $p_price = $_POST['p_price'] * $_POST['p_qty'];
+    $p_price = $_POST['p_price'];
 
     $db = new database();
     $db->connect();
@@ -77,8 +77,6 @@ function open_bill()
         $sql = "SELECT * FROM bill_detail WHERE Bill_id={$bill_result[0][0]}";
         $bill_detail = $db->query($sql);
     }
-    //$sql = "INSERT INTO bill(Bill_id, Cus_ID, Bill_Status) VALUES (1,1,1)";
-    $db->close();
     return ["step" => $step, "sql" => $sql, "bill" => $bill_head, "bill_detail" => $bill_detail];
 }
 ?>
